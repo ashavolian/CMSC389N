@@ -1,0 +1,53 @@
+body {
+	font-family: Arial, Helvetica, serif;
+	width: 50em;  /* try 25, 50 */
+	height: 100em;  /* try 75, 50 */
+	border-style: solid;
+	border-color: black; 
+} 
+
+#p1 {
+	width: 15em;
+	height: 10em;
+	border-style: solid;
+	border-color: red;
+}
+
+/* Increasing width*/
+#p2 {
+	width: 30em;
+	height: 10em;
+	border-style: solid;
+	border-color: red;
+	border-width: 3px medium thin;
+}
+
+/* Adding padding and margin */
+#p3 {
+	width: 15em;
+	height: 10em;
+	border-style: solid;
+	border-color: red;
+	padding: 2em;
+	margin: 4em;
+}
+
+/* Reducing size, using overflow visible */
+#p4 {
+	width: 15em;
+	height: 2em;
+	border-style: solid;
+	border-color: red;
+	padding: 2em;
+	overflow: visible; 
+}
+
+/* Reducing size, using overflow scroll */
+#p5 {
+	width: 15em;
+	height: 2em;
+	border-style: solid;
+	border-color: red;
+	padding: 2em;
+	overflow: scroll;
+}

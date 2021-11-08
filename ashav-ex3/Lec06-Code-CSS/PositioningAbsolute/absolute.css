@@ -1,0 +1,16 @@
+body {
+	font-family: Arial, Helvetica, serif;
+	height:300em;
+}
+
+#content {
+	position: relative; /*try changing to static */
+}
+
+#additionalRef {
+	position: absolute; /* try changing to static */
+	top:12em;
+	left:20em;
+}
+
+

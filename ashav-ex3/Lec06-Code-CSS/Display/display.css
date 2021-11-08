@@ -1,0 +1,71 @@
+body {
+	font-family: Arial, Helvetica, serif;
+}
+
+#list1 a {
+	display: inline;
+}
+
+#list2 a {
+	display: block;
+}
+
+#list3 a {
+	/* display: inline; */
+	border-style: solid;
+	border-color: yellowgreen;
+}
+
+#list4 a {
+	display: block;
+	border-style: solid;
+}
+
+#list5 a {
+	display: inline;
+	border-style: solid;
+	background-color: yellow;
+}
+
+#list6 a {
+	display: block;
+	border-style: solid;
+	background-color: yellow;
+}
+
+#list7 a {
+	display: block;
+	border-style: solid;
+	background-color: yellow;
+	width: 6em;
+	text-decoration: none;
+	margin: .25em;
+	text-align: center;
+}
+
+a:link {
+	color: blue;
+}
+
+a:visited {
+	color:purple;
+}
+
+a:hover {
+	color: red;
+}
+
+a:active {
+	color: gray;
+}
+
+p span {
+	display: inline-block;
+	border-style: solid;
+	background-color: yellow;
+	margin: 10px;
+}
+
+#hidden {
+	display: none;
+}

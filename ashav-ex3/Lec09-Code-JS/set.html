@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>JS Set Example</title>
+</head>
+
+<body>
+	<script>
+		"use strict";
+
+		/* Notice the use of const instead of let */
+		const mySet = new Set();
+		const student1 = {
+			name: "Mike",
+			id: 10,
+		};
+		const student2 = {
+			name: "Rose",
+			id: 20
+		};
+		mySet.add(150);
+		mySet.add(student1).add(student2); /* add is chainable */
+
+		// has()
+		document.writeln("150 part of the set? " + mySet.has(150) + "<br>");
+
+		// size property
+		document.writeln("Set size: " + mySet.size + "<br>");
+
+		// for...of because set is iterable
+		document.writeln("Set Entries<br>");
+		for (let entry of mySet) {
+			document.writeln("Entry: " + entry + "<br>");
+		}
+
+		// delete() 
+		document.writeln("<br><strong>After deleting an entry</strong><br>");
+		mySet.delete(student1);
+		for (let entry of mySet) {
+			document.writeln("Entry: " + entry + "<br>");
+		}
+
+		// clear()
+		document.writeln("<br><strong>After clearing the set</strong><br>");
+		mySet.clear();
+		for (let entry of mySet) {
+			document.writeln("Entry: " + entry + "<br>");
+		}
+
+		document.writeln("<br><strong>Set from array</strong><br>");
+		let arr = ["C", "JavaScript", "Pascal"];
+		document.writeln(arr + "<br>");
+
+		let setFromArray = new Set(arr);
+
+		// values() gives an iterator
+		// with for...of
+		document.writeln("<br><strong>iteration using values() and for...of loop</strong><br>");
+		let iter = setFromArray.values();
+		document.writeln("<ul>");
+		for (let e of iter) {
+			document.writeln("<li>" + e + "</li>")
+		}
+		document.writeln("</ul>");
+
+		// with iterator next()
+		document.writeln("<br><strong>iteration with values() and next()</strong><br>");
+		iter = setFromArray.values();
+		document.writeln("<ul>");
+		let result = iter.next();
+		while (!result.done) {
+			document.writeln("<li>" + result.value + "</li>")
+			result = iter.next();
+		}
+		document.writeln("</ul>");
+
+		// forEach()
+		document.writeln("<br><strong>iteration with forEach</strong><br>");
+		document.writeln("<ul>");
+		setFromArray.forEach(v => document.writeln("<li>" + v + "</li>"));
+		document.writeln("</ul>");
+
+
+	</script>
+</body>
+
+</html>

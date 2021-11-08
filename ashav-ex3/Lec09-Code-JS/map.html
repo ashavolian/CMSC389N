@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>JS Map Example</title>
+</head>
+
+<body>
+	<script>
+		"use strict";
+
+		// with for...of loop. 
+		function printMap(map) {
+			// size property
+			document.writeln("Map size: " + map.size + "<br>");
+			document.writeln("Map Entries<ul>");
+			for (let entry of map) {
+				document.writeln(entry + "<br>");
+			}
+			document.writeln("</ul>");
+		}
+
+		// map()
+		let map = new Map();
+		map.set("Mike", 88);
+		map.set("Rose", 90);
+		map.set("Kelly", 100);
+		printMap(map);
+
+		// get() , has()
+		document.writeln("<br>Value for Rose: " + map.get("Rose") + "<br>");
+		document.writeln("Value for NotInMap: " + map.get("NotInMap") + "<br>");
+		document.writeln("map.has(\"Mike\"): " + map.has("Mike") + "<br>");
+
+		// delete()
+		let firstDeletion = map.delete("Rose");
+		document.writeln("<br>First deletion (Rose): " + firstDeletion + "<br>");
+		let secondDeletion = map.delete("NotInMap");
+		document.writeln("Second deletion: " + secondDeletion + "<br>");
+		printMap(map);
+
+		// keys()
+		document.writeln("<br>Using keys()<br>");
+		for (let key of map.keys()) {
+			document.writeln(key + "<br>");
+		}
+
+		// values()
+		document.writeln("<br>Using values()<br>");
+		for (let value of map.values()) {
+			document.writeln(value + "<br>");
+		}
+
+		// entries()
+		document.writeln("<br>Using map.entries<br>");
+		for (let entry of map.entries()) {
+			document.writeln(entry[0] + ", " + entry[1] + "<br>");
+		}
+
+		// entries, destructured to key and value
+		document.writeln("<br>Using map.entries(2)<br>");
+		for (let [key, value] of map.entries()) {
+			document.writeln(key + ", " + value + "<br>");
+		}
+
+		// map is iterable, each entry is destructured
+		document.writeln("<br>Another Iteration<br>");
+		for (let [key, value] of map) {
+			document.writeln(key + ", " + value + "<br>");
+		}
+
+		// forEach()
+		document.writeln("<br>iteration with forEach<br>");
+		map.forEach((v, k) => {
+			document.writeln(k + ", " + v + "<br>");
+		});
+	</script>
+</body>
+
+</html>

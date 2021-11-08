@@ -1,0 +1,15 @@
+body {
+	font-family: Arial, Helvetica, serif; 
+}
+
+#UMDGlobeImgNone {
+	float: none; 
+}
+
+#UMDGlobeImgLeft {
+	float: left;
+}
+
+#UMDGlobeImgRight {
+	float: right;
+}

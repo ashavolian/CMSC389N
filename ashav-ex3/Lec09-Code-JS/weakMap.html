@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>JS WeakMap Example</title>
+</head>
+
+<body>
+	<script>
+		"use strict";
+
+		// constructor function 
+		// -- any JS function (except arrow functions) can be used as a constructor.
+		function TerpObjectForMap() {
+			this.data = new Array(300000);
+		}
+
+		function TerpObjectForWeakMap() {
+			this.data = new Array(300000);
+		}
+
+		window.mapObj = new TerpObjectForMap(); // create a new object
+		window.weakMapObj = new TerpObjectForWeakMap(); // create a new object
+
+		var map = new Map();
+		map.set(window.mapObj, 1);
+
+		var weakmap = new WeakMap();
+		weakmap.set(window.weakMapObj, 1);
+
+	</script>
+
+	<button onclick="delete window.mapObj">Delete window.mapObj</button>
+	<button onclick="delete window.weakMapObj">Delete window.weakMapObj</button>
+
+</body>
+
+</html>

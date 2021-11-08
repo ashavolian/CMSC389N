@@ -1,0 +1,96 @@
+body {
+	background-color: silver;
+  padding-left: 10%;
+}
+
+.border {
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: black;
+  }
+
+table, th, td {
+  border: 1px solid black;
+}
+
+.font {
+      font-size: .75rem;
+      font-family: Sans-serif;
+  }
+
+img {
+  border-radius: 8px;
+  max-width: 300px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+img:hover {
+  max-width: 320px
+}
+
+.video {
+    max-width: 400px; 
+    max-height: 200px;
+}
+
+.root{
+  font-size: 16px;
+}
+
+li {
+  font-size: .9em;
+}
+
+.list {
+  font-size: 1.2vw;
+}
+
+#headerWrap {
+    width: 100%;
+      text-align: left;
+      color: black;
+      font-size: 18px;
+      font-family: Sans-serif;
+      padding-left: 20px
+  }
+
+h1::first-line {
+  font-size: 26px;
+  font-family: cursive;
+}
+
+ol {
+  list-style: square;
+}
+
+ul {
+  list-style: square;
+}
+
+a:link {
+  color: grey;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: grey;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+  text-decoration: none;
+}
+
+.attraction {
+  text-transform: capitalize;
+}

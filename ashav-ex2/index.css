@@ -1,0 +1,29 @@
+body {
+	background-color: silver;
+}
+
+#headerWrap {
+		width: 100%;
+  		text-align: center;
+  		color: blue;
+  		font-size: 24px;
+  		font-family: Sans-serif;
+	}
+
+.city {
+  		color: blue;
+  		font-size: 18px;
+  		font-family: sofia;
+	}
+
+.city2 {
+  		color: blue;
+  		font-size: 18px;
+  		font-family: tangerine;
+	}
+
+img {
+  border-radius: 8px;
+  max-width: 300px;
+}
+

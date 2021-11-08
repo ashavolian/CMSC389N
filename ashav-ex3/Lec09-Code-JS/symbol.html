@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>JS Example</title>
+</head>
+
+<body>
+	<script>
+		"use strict";
+
+		let sym = Symbol("firstSymbol");
+
+		document.writeln(String(sym) +
+			"<br>");
+		document.writeln(sym.toString() +
+			"<br>");
+
+		// try to uncomment the following line. implicit conversion does not work
+		// document.writeln(sym + "<br>"); 
+
+		let sym2 = Symbol("firstSymbol");
+		if (sym === sym2) {
+			document.writeln("Symbols the same<br>");
+		} else {
+			document.writeln("Symbols are different<br>");
+		}
+		document.writeln("typeof sym: " + typeof sym + "<br><br>");
+
+		/* symbol as property key */
+		const SYMBOL_KEY = Symbol('a key to use');
+		const computedPropKey = "prop" + 0;
+
+		let myObj = {
+			name: "John",
+			[computedPropKey]: 3000,
+			[SYMBOL_KEY]: 789,
+			['home' + 'address']: "somewhere in maryland", // a computed prop key
+			[300 + 80 + 9]: "a computed property key!" // a computed prop key
+		};
+
+		document.writeln("myObj.name: " + myObj.name + "<br>");
+		document.writeln("myObj[name]: " + myObj['name'] + "<br>");
+		document.writeln("myObj[SYMBOL_KEY]: " + myObj[SYMBOL_KEY] + "<br>");
+		document.writeln(`myObj[${computedPropKey}]: ` + myObj[computedPropKey] + "<br><br>");
+
+		document.writeln(Object.getOwnPropertyNames(myObj) + "<br>");
+		document.writeln(String(Object.getOwnPropertySymbols(myObj)[0]) + "<br>");
+
+		// note that [SYMBOL_KEY] is ignored in the for-in loop 
+		document.writeln("<br>for..in<br>");
+		let text = "";
+		for (let prop in myObj) {
+			text += "'" + myObj[prop] + "' ";
+		}
+		document.writeln("<br>" + text + "<br>");
+
+		const MESSAGE = Symbol();
+		let testudo = {
+			[MESSAGE]: function () {
+				return 'Fear the turtle';
+			}
+		};
+		document.writeln("<br>Message is " + testudo[MESSAGE]() + "<br>");
+
+		const COLOR_RED = Symbol("Red");
+		const COLOR_BLUE = Symbol("Blue");
+		document.writeln("Boolean(COLOR_RED): " + Boolean(COLOR_RED) + "<br>");
+	</script>
+</body>
+
+</html>

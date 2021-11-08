@@ -1,0 +1,15 @@
+body {
+	height: 300em;
+	font-family: Arial, Helvetica, serif;
+}
+#nav {
+	position: fixed;
+	top:0em;
+}
+
+#p1 {
+	position: fixed;
+	top:15em;
+	left:10em;
+	color: red;
+}

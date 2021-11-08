@@ -1,0 +1,26 @@
+body {
+	font-family: Arial, Helvetica, serif; 
+}
+
+.borderOnly {
+	border-style: solid;
+}
+
+#p2 {
+	border-style: solid;
+	background-color: silver;
+	margin: 30px auto;
+}
+
+#p5 {
+	border-style: solid;
+	position: relative;
+	top: 1.5em;
+	left: 5em;
+	background-color: silver;
+}
+
+#pdelimeter {
+	color: red;
+	font-size: 2em;
+}

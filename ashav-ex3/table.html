@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Exercise 3 - Due: Oct. 7, by 11pm</title>
+    <style>
+        .border_thick{
+            border-width: thick; 
+            border-style: ridge; 
+            border-color: grey; 
+            border-collapse: collapse;
+        }
+        td{
+            text-align: center;
+            border-width: thin; 
+            border-style: ridge; 
+            border-color: grey; 
+            border-collapse: collapse;
+        }
+        th{
+            text-align: center;
+            border-width: thin; 
+            border-style: ridge; 
+            border-color: grey; 
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        var total_count = 0;
+        var val;
+        let val_array = [];
+        var val_sum = 0;
+        var sqr_sum = 0;
+
+        while (true){
+            val = window.prompt("Enter a value: ");
+            if (val == "done"){
+                break;
+            }
+            if (isNaN(val) || val == ""){
+                alert("Enter a valid number.");
+            } else{
+                val = Math.round(val);
+                val_array.push(val);
+                val_sum += val;
+                sqr_sum += Math.pow(val,2);
+                total_count += 1;
+            }
+        }
+        document.writeln("<caption><strong>Square Table</strong></caption>");
+        document.writeln("<table class = \"border_thick\">");
+        document.writeln("<tr class = \"border_thick\"><th>Count</th><th>Value</th><th>Squared Value</th></tr>");
+
+        for (let curr = 1; curr <= total_count; curr++) {
+            document.writeln("<tr class = \"border_thin\"><td>" + curr + "</td><td>" + val_array[curr-1] +
+                "</td><td style = \"font-style: italic; font-weight: bold; text-decoration: underline; color: blue;\">" + Math.pow(val_array[curr-1],2) + "</td></tr>");
+        }
+
+        document.writeln("<tr class = \"border_thick\"><td>Sum</td><td>" + val_sum +
+                "</td><td>" + sqr_sum + "</td></tr>");
+
+        document.writeln("</table>");
+        
+
+    </script>
+</body>
+
+</html>

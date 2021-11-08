@@ -1,0 +1,39 @@
+body {
+	font-family: Arial, Helvetica, serif; 
+}
+
+#navigation {
+	float: none; /* try right, left, none */
+}
+
+#news {
+	float: right; /* try right, left, none */
+}
+
+#navigation ul {
+	list-style-type: none;
+	margin-right: 1em;
+}
+
+#content {	text-align: justify; /* try removing this line  */
+}
+
+#footer {
+	text-align: center;
+}
+
+a:link {
+	color: blue;	
+}
+
+a:visited {
+	color:purple;
+}
+
+a:hover {
+	color: red;
+}
+
+a:active {
+	color: gray;
+}

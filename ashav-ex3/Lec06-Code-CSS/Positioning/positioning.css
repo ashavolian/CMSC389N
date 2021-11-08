@@ -1,0 +1,44 @@
+* {
+    font-size: 15pt;
+    background-color: grey;
+}
+
+body {
+    height: 2000px;
+    /*width: 700px;*/
+    /*border: 2pt red;*/
+}
+
+p {
+    width:20em;
+    border-style:solid;
+    padding: 15px;
+}
+
+#part1 {
+    position: relative;   /* adjust relative to "normal" position */
+    left: 5em;
+    top:0em;
+}
+
+#redRectangle {
+    border: 5px solid red;
+    width: 25em;
+    height: 10em;
+    position: fixed;     /*  stays in this spot, even if you scroll */
+    top: 200px;
+    left: 120px;
+    z-index: 3;
+}
+
+#part2 {
+    position: absolute;   /* adjust within non-static ancestor */
+    top: 130px;
+    left: 40px;
+}
+
+#part3 {
+    position: relative;  /* adjust relative to "normal" position */
+    top: 0px;
+    z-index: 12; /* increase to make it bring to forward */
+}
